@@ -5,7 +5,7 @@ class Triangle
       raise TriangleError
     end
     
-    
+    if a <
     @a = a 
     @b = b 
     @c = c 
