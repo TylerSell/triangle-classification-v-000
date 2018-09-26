@@ -9,6 +9,9 @@ class Triangle
       raise TriangleError
     end
     
+    if a == nil || b == nil || c = nil 
+      raise TriangleError
+    end
     
     @a = a 
     @b = b 
