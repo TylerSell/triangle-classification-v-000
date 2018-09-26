@@ -5,7 +5,11 @@ class Triangle
       raise TriangleError
     end
     
-    if a <
+    if a > (b + c) || b > (a + c) || c > (a + b)
+      raise TriangleError
+    end
+    
+    
     @a = a 
     @b = b 
     @c = c 
