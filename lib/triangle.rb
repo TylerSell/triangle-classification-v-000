@@ -20,6 +20,8 @@ class Triangle
  
   def kind 
     if @a == @b && @a == @c 
+      return :equilateral
+    elsif 
       
   end
   
