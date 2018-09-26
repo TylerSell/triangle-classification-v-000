@@ -19,7 +19,8 @@ class Triangle
   end
  
   def kind 
-    if @
+    if @a == @b && @a == @c 
+      
   end
   
   class TriangleError < StandardError
