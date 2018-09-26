@@ -1,33 +1,30 @@
-class Triangle
- 
-  def initialize(a, b, c)
-    
-    if a <= 0 || b <= 0 || c <= 0 
+def initialize(s1, s2, s3)
+   
+    if s1 >= (s2 + s3) || s2 >= (s1 + s3) || s3 >= (s1 + s2)
+      raise TriangleError
+    end
+     if s1 <= 0 || s2 <= 0 ||s3 <= 0
+      raise TriangleError
+    end
+     if s1 == nil || s2 == nil ||s3 == nil
       raise TriangleError
     end
     
-    if a >= (b + c) || b >= (a + c) || c >= (a + b)
-      raise TriangleError
-    end
-    
-    if a == nil || b == nil || c = nil 
-      raise TriangleError
-    end
-    
-    @a = a 
-    @b = b 
-    @c = c 
+    @s1 = s1
+    @s2 = s2
+    @s3 = s3
   end
- 
-  def kind 
-    if @a == @b && @a == @c && @b == @c 
+   
+  def kind
+    if @s1 == @s2 && @s1 == @s3
       return :equilateral
-    elsif @a == @b || @b == @c || @c == @a
+    elsif @s1 == @s2 || @s2 == @s3 || @s3 == @s1
       return :isosceles
-    else 
+    else
       return :scalene
     end
   end
+end
   
   class TriangleError < StandardError
     def message 
