@@ -5,7 +5,7 @@ class Triangle
     @b = b 
     @c = c 
     
-    if @a == @
+    if a 
   end
  
   def kind 
