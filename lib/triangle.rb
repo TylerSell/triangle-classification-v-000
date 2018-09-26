@@ -5,7 +5,7 @@ class Triangle
       raise TriangleError
     end
     
-    if a > (b + c) || b > (a + c) || c > (a + b)
+    if a >= (b + c) || b >= (a + c) || c >= (a + b)
       raise TriangleError
     end
     
